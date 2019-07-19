@@ -1,4 +1,4 @@
-import libtcodpy as libtcod
+import tcod as libtcod
 
 def render_all(con, entities, game_map, fov_map, fov_recompute, screen_width, screen_height, colors):
     if fov_recompute:

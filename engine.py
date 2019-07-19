@@ -1,5 +1,4 @@
 import tcod as libtcod
-import tcod.event
 
 from entity import Entity
 from fov_functions import initialize_fov, recompute_fov
@@ -54,7 +53,7 @@ def main():
     mouse = libtcod.Mouse()
 
     while libtcod.console_is_window_closed:
-        libtcod.event.get()
+        libtcod.sys_check_for_event(libtcod.EVENT_KEY_PRESS, key, mouse)
 
         if fov_recompute:
             recompute_fov(fov_map, player.x, player.y, fov_radius, fov_light_walls, fov_algorithm)
