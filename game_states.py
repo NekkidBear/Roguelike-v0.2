@@ -8,3 +8,4 @@ class GameStates(Enum):
     DROP_INVENTORY = auto()
     TARGETING = auto()
     LEVEL_UP = auto()
+    CHARACTER_SCREEN = auto()
